@@ -19,8 +19,8 @@
                 </span>
                 <span class="meta-divider"></span>
                 <span class="meta-item type">
-                  <i :class="project.company === 'College Final Year Project' ? 'fas fa-graduation-cap' : 'fas fa-briefcase'"></i>
-                  {{ project.company === 'College Final Year Project' ? 'Academic' : 'Commercial' }}
+                  <i :class="project.type === 'Academic' ? 'fas fa-graduation-cap' : 'fas fa-briefcase'"></i>
+                  {{ project.type }}
                 </span>
               </div>
             </div>

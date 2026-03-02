@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-center">
         <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Featured Innovations.</h2>
+        <h2 class="section-title">Latest Innovations.</h2>
       </div>
       
       <div class="projects-flex">
