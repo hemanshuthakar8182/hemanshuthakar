@@ -99,8 +99,8 @@ onUnmounted(() => {
 /* Responsive Scaling */
 @media (max-width: 768px) {
   .floating-container {
-    bottom: 25px;
-    right: 25px;
+    bottom: 30px;
+    right: 20px;
     gap: 12px;
   }
   
@@ -113,8 +113,8 @@ onUnmounted(() => {
 
 @media (max-width: 480px) {
   .floating-container {
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 15px;
     gap: 10px;
   }
   
@@ -122,6 +122,16 @@ onUnmounted(() => {
     width: 40px;
     height: 40px;
     font-size: 16px;
+  }
+
+  /* When only call button is visible (top-btn hidden) */
+  .floating-container:not(.show-top) {
+    bottom: 30px;
+  }
+
+  /* When both buttons are visible */
+  .floating-container.show-top {
+    bottom: 80px; 
   }
 }
 </style>
