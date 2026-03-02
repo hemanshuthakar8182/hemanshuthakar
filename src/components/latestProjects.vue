@@ -16,9 +16,9 @@
       </div>
 
       <div class="text-center" style="margin-top: 50px;">
-        <router-link to="/projects" class="btn btn-primary">
+        <button class="btn btn-primary" @click="$emit('view-all')">
           View All Projects
-        </router-link>
+        </button>
       </div>
     </div>
   </section>
@@ -28,6 +28,8 @@
 import { computed } from 'vue'
 import ProjectCard from './projectCard.vue'
 import { projects } from '../data/projects.js'
+
+defineEmits(['view-all'])
 
 const displayedProjects = computed(() => {
   const targetIds = [1, 2, 3]
@@ -42,5 +44,12 @@ const displayedProjects = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+button.btn-primary {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
 }
 </style>

@@ -16,9 +16,9 @@
 
       <!-- Fixed Back to Home Button -->
       <div class="fixed-back-btn">
-        <router-link to="/?scrollTo=projects" class="glass-btn">
+        <button class="glass-btn" @click="$emit('close')">
           <i class="fas fa-arrow-left"></i> Back
-        </router-link>
+        </button>
       </div>
     </div>
   </div>
@@ -28,6 +28,8 @@
 import { onMounted } from 'vue'
 import ProjectCard from '../components/projectCard.vue'
 import { projects } from '../data/projects.js'
+
+defineEmits(['close'])
 
 onMounted(() => {
   window.scrollTo(0, 0); // scroll to top when visiting all projects
@@ -86,8 +88,10 @@ onMounted(() => {
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 600;
+  font-family: inherit;
   font-size: 15px;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
