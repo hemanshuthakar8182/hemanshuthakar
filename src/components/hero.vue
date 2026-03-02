@@ -114,7 +114,7 @@
 <script setup>
 import { profileData } from '../data/projects.js'
 
-const resumeUrl = '/Hemanshu_Thakar_Final_Resume.pdf'
+const resumeUrl = '/Hemanshu_Thakar_Resume.pdf'
 
 const scrollTo = (id) => {
   const el = document.getElementById(id)

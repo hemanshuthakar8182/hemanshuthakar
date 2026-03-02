@@ -119,9 +119,9 @@ onUnmounted(() => {
   }
   
   .float-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
   }
 
   /* When only call button is visible (top-btn hidden) */
