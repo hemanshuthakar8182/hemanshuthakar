@@ -24,6 +24,9 @@
             <a href="tel:+917016283990" title="Phone" class="social-icon">
               <i class="fas fa-phone"></i>
             </a>
+            <a href="https://wa.me/917016283990" target="_blank" title="WhatsApp" class="social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
 
@@ -45,12 +48,12 @@
         <div class="footer-col">
           <h4 class="col-title">Live Projects</h4>
           <ul>
+            <li><a href="https://app.homearize.com/" target="_blank">HomeArize App</a></li>
             <li><a href="https://narodagroup.com/" target="_blank">Naroda Group</a></li>
             <li><a href="https://vibrantindiatrade.in/" target="_blank">Vibrant India Trade</a></li>
             <li><a href="https://arrowlasermachine.com/" target="_blank">Arrow Laser Machine</a></li>
-            <li><a href="https://natrajsteel.com/" target="_blank">Natraj Steel</a></li>
-            <li><a href="https://app.homearize.com/" target="_blank">HomeArize App</a></li>
             <li><a href="https://www.homearize.com/" target="_blank">HomeArize Website</a></li>
+            <li><a href="https://natrajsteel.com/" target="_blank">Natraj Steel</a></li>
           </ul>
         </div>
 

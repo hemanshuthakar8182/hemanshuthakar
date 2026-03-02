@@ -1,11 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, provide } from 'vue'
 import Navbar from './components/navbar.vue'
 import Footer from './components/footer.vue'
 import Preloader from './components/preloader.vue'
 import FloatingButtons from './components/floatingButtons.vue'
 
 const isLoading = ref(true)
+
+// Provide to deep children e.g. hero.vue to delay animations
+provide('isAppLoading', isLoading)
 
 onMounted(() => {
   const finishLoading = () => {

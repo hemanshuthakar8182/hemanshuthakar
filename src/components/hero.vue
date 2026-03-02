@@ -14,7 +14,7 @@
         </div>
 
         <h1 class="hero-title">
-          I'm <span class="gradient-text name-highlight">{{ profileData.name }}</span>
+          I'm <span class="gradient-text name-highlight">{{ displayedName }}</span><span class="title-cursor"></span>
         </h1>
 
         <div class="role-row">
@@ -112,9 +112,42 @@
 </template>
 
 <script setup>
+import { ref, onMounted, inject, watch } from 'vue'
 import { profileData } from '../data/projects.js'
 
 const resumeUrl = '/Hemanshu_Thakar_Resume.pdf'
+const displayedName = ref('')
+const isAppLoading = inject('isAppLoading', ref(false))
+
+const startTyping = () => {
+  const fullText = profileData.name
+  let currentIndex = 0
+  const typeSpeed = 100 // ms per char
+  
+  const typeChar = () => {
+    if (currentIndex < fullText.length) {
+      displayedName.value += fullText.charAt(currentIndex)
+      currentIndex++
+      setTimeout(typeChar, typeSpeed)
+    }
+  }
+  
+  // Start shortly after the preloader finishes fading out
+  setTimeout(typeChar, 400) 
+}
+
+onMounted(() => {
+  if (!isAppLoading.value) {
+    startTyping()
+  } else {
+    const unwatch = watch(isAppLoading, (newVal) => {
+      if (!newVal) {
+        startTyping()
+        unwatch()
+      }
+    })
+  }
+})
 
 const scrollTo = (id) => {
   const el = document.getElementById(id)
@@ -135,7 +168,7 @@ const scrollTo = (id) => {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 10% 80px;
+  padding: 100px 10% 80px;
 }
 
 /* Background Glows */
@@ -226,6 +259,18 @@ const scrollTo = (id) => {
 @keyframes shimmer {
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
+}
+
+.title-cursor {
+  display: inline-block;
+  width: clamp(3px, 0.5vw, 6px);
+  height: 0.85em;
+  background: var(--accent);
+  margin-left: 6px;
+  vertical-align: text-bottom;
+  animation: blink 1.1s step-end infinite;
+  box-shadow: 0 0 10px var(--accent-glow);
+  transform: translateY(-2px);
 }
 
 /* Role */
@@ -483,7 +528,7 @@ code {
 }
 @media (max-width: 600px) {
   .hero-title { font-size: 42px; letter-spacing: -1px; }
-  .hero-section { padding: 120px 6% 60px; }
+  .hero-section { padding: 100px 6% 60px; }
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 }

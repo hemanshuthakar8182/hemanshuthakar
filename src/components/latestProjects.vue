@@ -30,7 +30,7 @@ import ProjectCard from './projectCard.vue'
 import { projects } from '../data/projects.js'
 
 const displayedProjects = computed(() => {
-  const targetIds = [6, 1, 2]
+  const targetIds = [1, 2, 3]
   return targetIds.map(id => projects.find(p => p.id === id)).filter(Boolean)
 })
 </script>
