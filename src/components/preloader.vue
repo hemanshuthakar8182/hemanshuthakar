@@ -4,8 +4,11 @@
       <div class="loader-wrapper">
         <!-- Single elegant rotating ring -->
         <div class="loader-ring"></div>
-        <!-- Logo centered securely -->
-        <img src="/logo.svg" alt="Hemanshu Thakar" class="loader-logo" />
+        <!-- Animated Name Text instead of Logo -->
+        <div class="loader-text">
+          <span class="name-gradient">Hemanshu</span>
+          <span class="name-gradient name-last">Thakar</span>
+        </div>
       </div>
     </div>
   </transition>
@@ -57,8 +60,8 @@ onUnmounted(() => {
 
 .loader-wrapper {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,15 +82,39 @@ onUnmounted(() => {
   animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
-/* Bigger Center Logo */
-.loader-logo {
+/* Beautiful Animated Text */
+.loader-text {
   position: relative;
   z-index: 10;
-  width: 80px; /* Increased size to be clearly visible */
-  height: 80px;
-  object-fit: contain;
-  border-radius: 12px;
-  animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  text-align: center;
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+.name-gradient {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: shimmer-text 4s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.4));
+}
+
+.name-last {
+  font-size: 15px;
+  letter-spacing: 5px;
+  opacity: 0.9;
+  margin-top: 4px;
 }
 
 /* Keyframes */
@@ -96,14 +123,19 @@ onUnmounted(() => {
   100% { transform: rotate(360deg); }
 }
 
-@keyframes pulse {
+@keyframes shimmer-text {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes pulse-text {
   0%, 100% { 
     transform: scale(0.95); 
-    filter: drop-shadow(0 0 5px var(--accent-glow));
+    filter: drop-shadow(0 0 5px rgba(167, 139, 250, 0.3));
   }
   50% { 
     transform: scale(1.05); 
-    filter: drop-shadow(0 0 15px var(--accent));
+    filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.6));
   }
 }
 

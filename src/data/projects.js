@@ -35,42 +35,70 @@ export const skillsData = [
 export const projects = [
     {
         id: 1,
+        title: 'HomeArize Software',
+        company: 'Buoyancy Software',
+        points: [
+            'HomeArize is a full-stack flooring business management system built using Angular and ASP.NET Web API. The application helps manage room layouts, flooring projects, order tracking, and client workflows in an organized manner.',
+            'I developed a modular and scalable Angular frontend integrated with secure REST APIs built in ASP.NET (C#). The system supports role-based access, structured data handling, and optimized SQL Server queries to ensure smooth performance and reliability.',
+            'This project demonstrates my ability to build enterprise-level applications with clean architecture and efficient frontend-backend integration.'
+        ],
+        tags: ['Angular', 'ASP.NET C# API', 'JS', 'HTML', 'CSS', 'Bootstrap'],
+        github: '#',
+        demo: 'https://app.homearize.com/'
+    },
+    {
+        id: 2,
         title: 'Naroda Group',
         company: 'Vibrant India Tech',
         points: [
-            'Developed a responsive corporate website and admin dashboard using React.',
-            'Integrated PHP REST APIs for authentication, CRUD operations, and dynamic content management.'
+            'Naroda Group is a full-stack real estate platform developed using React JS and PHP REST APIs. The platform allows users to explore residential flats and commercial office spaces with dynamic filtering and inquiry management features.',
+            'I built a responsive React frontend integrated with secure PHP backend APIs for handling property listings, customer inquiries, and administrative workflows. The system includes an admin dashboard for managing buildings, floors, units, and leads efficiently. Optimized MySQL queries were implemented to ensure fast data retrieval and smooth performance.',
+            'This project highlights my ability to develop scalable property management platforms with secure backend integration and structured database design.'
         ],
         tags: ['React JS', 'PHP (REST API)', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
         github: '#',
         demo: 'https://narodagroup.com/'
     },
     {
-        id: 2,
+        id: 3,
         title: 'Vibrant India Trade',
         company: 'Vibrant India Tech',
         points: [
-            'Developed an informative, product-focused kitchen and hospitality website with a JavaScript-based frontend and admin panel, integrated with a PHP backend.',
-            'Implemented dynamic product listing, category management, and content updates through admin-controlled APIs for seamless data handling.'
+            'Vibrant India Trade is a product-based web platform developed using JavaScript and PHP REST APIs. The application is designed to showcase kitchenware products with category management and inquiry-based purchasing functionality.',
+            'I developed the frontend interface with dynamic product rendering and integrated secure backend APIs for managing products, categories, and customer inquiries. The system uses MySQL for efficient data handling and structured CRUD operations.',
+            'This project demonstrates my skills in building secure, dynamic product platforms with proper API architecture and optimized database performance.'
         ],
         tags: ['JavaScript', 'PHP (REST API)', 'MySQL', 'HTML', 'CSS', 'Bootstrap'],
         github: '#',
         demo: 'https://vibrantindiatrade.in/'
     },
     {
-        id: 3,
+        id: 4,
         title: 'Arrow Laser Machine',
         company: 'Vibrant India Tech',
         points: [
-            'Developed a responsive, product-focused informational website for industrial laser machines using React JS.',
-            'Designed reusable components and optimized layouts to showcase product features, specifications, and applications across devices.'
+            'Arrow Laser Machine is a responsive industrial product website developed using React JS. The platform focuses on presenting machinery products professionally while generating customer inquiries.',
+            'I built reusable React components and structured layouts to ensure responsiveness across all devices. The website is optimized for performance, clean UI presentation, and improved user engagement.',
+            'This project showcases my frontend development expertise, UI structuring ability, and focus on building responsive business websites.'
         ],
         tags: ['React JS', 'HTML', 'CSS', 'Bootstrap'],
         github: '#',
         demo: 'https://arrowlasermachine.com/'
     },
     {
-        id: 4,
+        id: 5,
+        title: 'HomeArize Website',
+        company: 'Buoyancy Software',
+        points: [
+            'Created a responsive customer-facing marketing website using HTML, CSS, Bootstrap, and JavaScript to showcase product features and pricing.',
+            'Designed engaging layouts with CTAs and contact forms to support lead generation across desktop and mobile devices.'
+        ],
+        tags: ['JS', 'HTML', 'CSS', 'Bootstrap'],
+        github: '#',
+        demo: 'https://www.homearize.com/'
+    },
+    {
+        id: 6,
         title: 'Natraj Steel',
         company: 'Vibrant India Tech',
         points: [
@@ -81,7 +109,7 @@ export const projects = [
         demo: 'https://natrajsteel.com/'
     },
     {
-        id: 5,
+        id: 7,
         title: 'Dinesh Industries Tech',
         company: 'Vibrant India Tech',
         points: [
@@ -91,30 +119,8 @@ export const projects = [
         github: '#',
         demo: 'https://dineshindustriestech.com/'
     },
-    {
-        id: 6,
-        title: 'HomeArize Software',
-        company: 'Buoyancy Software',
-        points: [
-            'Developed a full-stack flooring business management system using Angular and ASP.NET Web API.',
-            'Implemented REST APIs and a responsive, modular frontend for scalability and performance.'
-        ],
-        tags: ['Angular', 'ASP.NET C# API', 'JS', 'HTML', 'CSS', 'Bootstrap'],
-        github: '#',
-        demo: 'https://app.homearize.com/'
-    },
-    {
-        id: 7,
-        title: 'HomeArize Website',
-        company: 'Buoyancy Software',
-        points: [
-            'Created a responsive customer-facing marketing website using HTML, CSS, Bootstrap, and JavaScript to showcase product features and pricing.',
-            'Designed engaging layouts with CTAs and contact forms to support lead generation across desktop and mobile devices.'
-        ],
-        tags: ['JS', 'HTML', 'CSS', 'Bootstrap'],
-        github: '#',
-        demo: 'https://www.homearize.com/'
-    }
+
+
 ];
 
 export const experienceData = [

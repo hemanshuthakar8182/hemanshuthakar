@@ -102,6 +102,30 @@
                 <i class="fas fa-eye"></i> My Work
               </a>
             </div>
+
+            <!-- Social Media Icons Integration -->
+            <div class="profile-social-divider"></div>
+            
+            <div class="profile-social">
+              <span class="social-label">Connect with me:</span>
+              <div class="social-row">
+                <a href="https://www.linkedin.com/in/hemanshu-thakar" target="_blank" title="LinkedIn" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/hemanshuthakar8182" target="_blank" title="GitHub" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:Himanshuthakar8181@gmail.com" title="Email" class="social-icon">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+917016283990" title="Phone" class="social-icon">
+                  <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://wa.me/917016283990" target="_blank" title="WhatsApp" class="social-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Expertise Tags removed as they are present in Skills section -->
@@ -376,6 +400,56 @@ const scrollTo = (id) => {
   cursor: pointer;
 }
 
+/* --- Social Connections --- */
+.profile-social-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 24px 0;
+}
+
+.profile-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
@@ -400,5 +474,7 @@ const scrollTo = (id) => {
   .profile-actions .btn { width: 100%; justify-content: center; }
   .detail-row { font-size: 13px; }
   .strength-item { flex-direction: column; text-align: center; align-items: center; }
+  .social-row { justify-content: center; }
+  .social-label { text-align: center; }
 }
 </style>
